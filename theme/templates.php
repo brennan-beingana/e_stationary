@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Statiofy</title><!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <title>Statiofy</title><link href="css/bootstrap.min.css" rel="stylesheet">
     
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -13,6 +13,7 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="custom-styles.css">-->
 
 </head><!--/head-->
 
@@ -29,7 +30,7 @@ if (isset($_SESSION['gcCart'])){
 
   <header id="header"><!--header-->
     <div class="header_top" style="background-color: #0B58FF;"><!--header_top-->
-      <div class="container">
+      <div class="container" >
         <div class="row">
           <div class="col-sm-6">
             <div class="contactinfo">
@@ -56,31 +57,31 @@ if (isset($_SESSION['gcCart'])){
     
     <div class="header-middle"><!--header-middle-->
       <div class="container">
-        <div class="row">
+        <div class="row" style="display: flex; flex-direction:row; alighn-items: center; justify-content: space-between;">
           <div class="col-md-4 clearfix">
-            <div class="logo pull-left">
-              <!-- <a href="<?php echo web_root?>"><img src="images/home/logo.png" alt="" /></a> -->
-              <img src="<?php echo web_root; ?>images/home/logos/statiofy_logo1.jpg" alt="Image" height="20px" width="150px">
-            </div> 
-          </div>
-          
-          <div class="col-md-8 clearfix">
-            <!-- From Uiverse.io by alexruix --> 
-<div class="group">
-  <svg style="width:10px; height:10px;"class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-  <input placeholder="Search" type="search" class="input">
-</div>
-            <div class="shop-menu clearfix pull-right">
-              <ul class="nav navbar-nav">     
-                <li><a href="<?php echo web_root;?>index.php?q=cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                <?php if (isset($_SESSION['CUSID'] )) { ?>  
-                  <li><a href="<?php echo web_root?>index.php?q=profile"><i class="fa fa-user"></i> Account</a></li>     
-                  <li><a   href="<?php echo web_root?>logout.php"><i class="fa fa-lock"></i> Logout</a></li>
-                <?php }else{ ?> 
-                <li><a data-target="#smyModal" data-toggle="modal"  href=""><i class="fa fa-lock"></i> Login</a></li>
-              <?php } ?>
-              </ul>
-            </div>
+              <div class="logo pull-left">
+                  <!-- <a href="<?php echo web_root?>"><img src="images/home/logo.png" alt="" /></a> -->
+                  <img src="<?php echo web_root; ?>images/home/logos/statiofy_logo1.jpg" alt="Image" height="20px" width="150px">
+                </div> 
+              </div>
+              <div class="group" style="margin-right: 20px;" >
+                  <svg style="width:10px; height:10px;"class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                    <input placeholder="Search" type="search" class="input" style="min-width:300px; border: 1px;">
+              </div>
+              <div class="col-md-8 clearfix">
+                <!-- From Uiverse.io by alexruix --> 
+
+              <div class="shop-menu clearfix pull-right" style="right: 0; justify-content: flex-end;">
+                  <ul class="nav navbar-nav">     
+                    <li><a href="<?php echo web_root;?>index.php?q=cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                    <?php if (isset($_SESSION['CUSID'] )) { ?>  
+                      <li><a href="<?php echo web_root?>index.php?q=profile"><i class="fa fa-user"></i> Account</a></li>     
+                      <li><a   href="<?php echo web_root?>logout.php"><i class="fa fa-lock"></i> Logout</a></li>
+                    <?php }else{ ?> 
+                    <li><a data-target="#smyModal" data-toggle="modal"  href=""><i class="fa fa-lock"></i> Login</a></li>
+                  <?php } ?>
+                  </ul>
+              </div>
           </div>
         </div>
       </div>
