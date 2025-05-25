@@ -10,7 +10,73 @@ body {
     position: relative;
     font-weight: 400px;
 }
+.my-search-btn{
+    --color: white;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2em;
+  
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #FE980F;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: white;
+}
+.my-search-btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 100px;
+  width: 150px;
+  border-radius: 50%;
+}
+.my-search-btn:hover {
+  color: #FE980F;
+}
+.my-search-btn:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
 
+.my-search-btn:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.my-search-btn:active:before {
+  background: #FE980F;
+  transition: background 0s;
+}
+/* Sticky header styles */
+.header-middle {
+    transition: all 0.3s ease;
+    background-color: white;
+    z-index: 1000;
+}
+
+.header-middle.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Prevent content jump when header becomes sticky */
+body.sticky-active {
+    padding-top: 80px; /* Adjust based on your header height */
+}
 /* From Uiverse.io by alexruix */ 
 .group {
  display: flex;
@@ -18,6 +84,7 @@ body {
  align-items: center;
  position: relative;
  max-width: 190px;
+ 
 }
 
 .group input {
